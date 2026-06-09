@@ -43,7 +43,7 @@ results = index.query(vector=query_vector, top_k=TOP_K, include_metadata=True)
 print_results(results, f"Семантичний пошук: '{query}'")
 
 
-# Виконуємо пошук з фільтрацією ─
+# Виконуємо пошук з фільтрацією
 
 # Приклад A: reinforcement learning, категорія cs.LG
 query_a = "reinforcement learning"

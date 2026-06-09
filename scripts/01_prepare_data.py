@@ -78,13 +78,13 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
         })
 
 df = pd.DataFrame(records)
-print(f"\\nЗавантажено статей:{len(df)}")
-print(f"\\nРозподіл за категоріями (топ-10):")
+print(f"\nЗавантажено статей:{len(df)}")
+print(f"\nРозподіл за категоріями (топ-10):")
 print(df["category"].value_counts().head(10))
-print(f"\\nРозподіл за роками:")
+print(f"\nРозподіл за роками:")
 print(df["year"].value_counts().sort_index().tail(10))
-print(f"\\nПриклад запису:")
+print(f"\nПриклад запису:")
 print(df.iloc[0].to_dict())
 
 df.to_parquet(OUTPUT_FILE, index=False)
-print(f"\\nЗбережено в{OUTPUT_FILE}")
+print(f"\nЗбережено в{OUTPUT_FILE}")
